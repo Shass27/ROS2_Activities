@@ -1,4 +1,8 @@
 <launch>
-    <node pkg="number_publisher" exec="number_publisher"/>
+    <node pkg="number_publisher" exec="number_publisher">
+        <!-- <param name="number" value="6"/>
+        <param name="timer_period" value="0.8"/> -->
+        <param from="${find-pkg-share my_robot_bringup}/config/number_app.yaml"/>
+    </node>
     <node pkg="number_counter" exec="number_counter"/>
-</launch>
+</launch>z`
